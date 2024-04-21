@@ -1,3 +1,18 @@
+- [MY LIVE SITE URL](https://student-dashboard-project-1.netlify.app/)
+
+### Getting started
+
+1. Fork and clone this repository.
+
+1. Navigate to the cloned repository's directory on your command line. Then, run the following command:
+
+   ```
+   npm install
+   ```
+
+   This will install the libraries needed.
+---
+
 # Student Dashboard Project
 
 For this assignment, you will build a student dashboard that will make use of already existing data stored in a JSON file. Users will be able to view students in several ways as well as add comments to those students.
