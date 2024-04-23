@@ -61,9 +61,8 @@ ul {
 .lower-main { 
   grid-area: 2 / 1 / 6 / 3;
   padding: 0px;
-  max-width: 1030px;
+  // max-width: 1030px;
 }
-
 
 .all-students {
   width: 856px;
@@ -89,8 +88,8 @@ ul {
 .student-card {
   background-color: #FFFFFF;
   display: inline-block;
-  margin: 20px 0px 15px 6px;
-  width: 300px;
+  margin: 20px 20px 15px 6px;
+  width: 280px;
   height: 280px;
   border-radius: 20px;
   align-content: center;
@@ -156,17 +155,24 @@ ul {
 }
 
 .all-students-option {
-  padding: 10px;  
+
+  margin-bottom: 20px;
+  height: 30px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 100px;
   width: 200px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 20px;
-  gap: 10px;  
-  width: 220px;
-  height: 59px;  
-  background: #21D19F;
-  border-radius: 10px;  
+  font-size: 16px;
+  background-color: #21D19F;
+  border-radius: 10px;
+
+  li:hover {
+    background-color: #21D19F;
+    border-radius: 10px;
+    margin: 20px;
+    height: 30px;
+    width: 200px;
+  } 
 } 
 

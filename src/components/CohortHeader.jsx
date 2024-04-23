@@ -5,7 +5,7 @@ import React from "react";
 
 const CohortHeader = ({ selectedCohort, totalStudents }) => {
 
-  const humanReadableCohort = selectedCohort.replace(/(\d+)/, ' $1');
+  const humanReadableCohort = selectedCohort ? selectedCohort.replace(/(\d+)/, ' $1') : selectedCohort;
 
   return (
     <div className="cohort-header">

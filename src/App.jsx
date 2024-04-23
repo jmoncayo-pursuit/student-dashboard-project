@@ -5,7 +5,7 @@ import StudentList from "./components/StudentList";
 import CohortList from "./components/CohortList";
 import CohortHeader from "./components/CohortHeader";
 import OneOnOneSection from "./components/OneOnOneSection";
-import AdditionalDetails from "./components/AdditionalDetails";
+import AdditionalDetails from "./components/additionaldetails/AdditionalDetails";
 import data from "./data/data.json";
 import "./app.scss";
 import SortByDateDropdown from "./components/sortbydatedropdown/SortByDateDropdown";
