@@ -9,20 +9,19 @@ const CohortList = ({ cohorts, onSelectCohort, selectedCohort }) => {
 
         <li
           key="all"
-          className={selectedCohort === null ? "active" : ""} // Highlight "All Students"
+          className={selectedCohort === null ? "active" : ""} 
           onClick={() => onSelectCohort("all")}
         >
           <span className="all-students-option">All Students</span>
         </li>
 
         {cohorts.sort().map((cohort, index) => {
-          // Add a space before the year to make it more human-readable
           const humanReadableCohort = cohort.replace(/(\d+)/, ' $1');
 
           return (
             <li
               key={index}
-              className={selectedCohort === cohort ? "selected" : ""} // Highlight selected cohort
+              className={selectedCohort === cohort ? "selected" : ""} 
               onClick={() => onSelectCohort(cohort)}
             >
               {humanReadableCohort}
