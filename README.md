@@ -1,5 +1,7 @@
 - [MY LIVE SITE URL](https://student-dashboard-project-1.netlify.app/)
 
+---
+
 ### Getting started
 
 1. Fork and clone this repository.
