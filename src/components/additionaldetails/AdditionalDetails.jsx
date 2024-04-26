@@ -19,7 +19,11 @@ const AdditionalDetails = ({ student }) => {
     codewars.current.total > 600
   );
 
-  // Function to render certification status emoji
+  const formatPercentage = (value) => {
+    return `${(value * 100).toFixed(2)}%`;
+  };
+
+
   const renderCertificationStatus = (certification) => {
     return certification ? "✅" : "❌";
   };
@@ -65,9 +69,9 @@ const AdditionalDetails = ({ student }) => {
               <h3>Cohort:</h3>
               <p>Cohort Code: {cohort.cohortCode}</p>
               <p>Start Date: {cohort.cohortStartDate}</p>
-              <p>Assignments Score: {cohort.scores.assignments}</p>
-              <p>Projects Score: {cohort.scores.projects}</p>
-              <p>Assessments Score: {cohort.scores.assessments}</p>
+              <p>Assignments Score: {formatPercentage(cohort.scores.assignments)}</p>
+              <p>Projects Score: {formatPercentage(cohort.scores.projects)}</p>
+              <p>Assessments Score: {formatPercentage(cohort.scores.assessments)}</p>
             </div>
           </div>
           <div className="detail">
