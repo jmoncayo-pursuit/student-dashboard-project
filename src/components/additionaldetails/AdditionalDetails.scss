@@ -93,7 +93,7 @@ body.student-details-popup-open {
 }
 
 .detail-data p {
-  font-size: .8em;
+  font-size: .9em;
   text-align: left;
   margin-left: 10px;
   padding-bottom: 10px;
@@ -107,4 +107,11 @@ body.student-details-popup-open {
 .student-details p {
   color: #A4A4A4;
   font-size: 20px;
+}
+.notes-section {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 15px;
+  padding: 20px;
 }

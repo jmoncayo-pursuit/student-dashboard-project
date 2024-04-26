@@ -1,5 +1,4 @@
 // StudentCard.jsx
-// Component representing each student's card in the list, displaying their basic information like name, username, birthday, and profile photo.
 
 import React, { useState } from "react";
 import AdditionalDetails from "./additionaldetails/AdditionalDetails";
@@ -25,33 +24,31 @@ const StudentCard = ({ student }) => {
 
   return (
     <div className="student-card">
-        <div className="student-info">
-            <img src={profilePhoto} alt={names.preferredName} className="profile-photo" />
-            <h2>{names.preferredName} {names.middleName} {names.surname}</h2>
-        </div>
-        <div className="email-bday">
-            <p>{username}</p>
-            Birthday {dob}
-        </div>
-        <div >
-            <button className="details-btn" onClick={handleShowDetails}>More Details</button>
-        </div>
-        {showDetails && (
-          <div className="student-details-popup">
-            <button className="close-btn" onClick={handleShowDetails}>X</button>
-            <div className="student-info-popup">
-              {/* Student info goes here */}
-            </div>
+      <div className="student-info">
+        <img src={profilePhoto} alt={names.preferredName} className="profile-photo" />
+        <h2>{names.preferredName} {names.middleName} {names.surname}</h2>
+        <p>{username}</p>
+        Birthday {dob}
+      </div>
+      <button className="details-btn" onClick={handleShowDetails}>More Details</button>
+      {showDetails && (
+        <div className="student-details-popup">
+          <button className="close-btn" onClick={handleShowDetails}>X</button>
+          <div className="student-info-popup">
+            {/* Student info goes here */}
+          </div>
+          <div className="additional-details">
+            <AdditionalDetails student={student} />
+          </div>
+          <div className="notes-section">
             {!showNotes ? (
-              <div className="scores-codewars-certifications">
-                <AdditionalDetails student={student} />
-                <button className="notes-btn" onClick={handleShowNotes}>Notes</button>
-              </div>
+              <button className="notes-btn" onClick={handleShowNotes}>Add Notes</button>
             ) : (
               <OneOnOneSection student={student} />
             )}
           </div>
-        )}
+        </div>
+      )}
     </div>
   );
 };
