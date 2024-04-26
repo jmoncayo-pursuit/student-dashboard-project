@@ -1,8 +1,5 @@
-// AdditionalDetails.jsx 
-// Component to show additional information about a student, including percentages for scores and certification statuses.
-
-import './AdditionalDetails.scss';
 import React from "react";
+import './AdditionalDetails.scss';
 
 const AdditionalDetails = ({ student }) => {
   if (!student) return null;
@@ -21,22 +18,22 @@ const AdditionalDetails = ({ student }) => {
   );
 
   return (
-    
-   
-<div className='pop-out-window'>    
-      <div className="student-info pop-out">
-        <img src={profilePhoto} alt={names.preferredName} className="profile-photo" />
-        <h2>{names.preferredName} {names.middleName} {names.surname}</h2>
+    <div className='pop-out-window'>
+      <div className="student-box">
+        <div className="student-info">
+          <img src={profilePhoto} alt={names.preferredName} className="profile-photo" />
+          <div className="student-details">
+            <h2>{names.preferredName} {names.middleName} {names.surname}</h2>
+            <p>{username}</p>
+            <p>Birthday {dob}</p>
+          </div>
+        </div>
       </div>
-      <div className="email-bday">
-        <p>{username}</p>
-        Birthday {dob}
+      <div className="additional-details">
+        <h2>Additional Details</h2>
+        <p>Codewars Score: {codewars.current.total}</p>
+        <p>On-track Status: {isOnTrack ? 'On Track' : 'Off Track'}</p>
       </div>
-       <div className="additional-details">
-      <h2>Additional Details</h2>
-      <p>Codewars Score: {codewars.current.total}</p>
-      <p>On-track Status: {isOnTrack ? 'On Track' : 'Off Track'}</p>
-    </div>
     </div>
   );
 };
