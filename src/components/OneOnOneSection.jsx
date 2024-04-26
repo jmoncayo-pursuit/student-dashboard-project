@@ -8,7 +8,6 @@ const OneOnOneSection = ({ student, onCloseNotes }) => {
   const [notes, setNotes] = useState([]);
 
   useEffect(() => {
-    // Retrieve notes data from local storage
     const storedNotes = localStorage.getItem(`notes_${student.username}`);
     if (storedNotes) {
       setNotes(JSON.parse(storedNotes));
@@ -16,11 +15,9 @@ const OneOnOneSection = ({ student, onCloseNotes }) => {
   }, [student]);
 
   const handleAddNote = (newNote) => {
-    // Update state with new note
     const updatedNotes = [...notes, newNote];
     setNotes(updatedNotes);
     
-    // Store updated notes data in local storage
     localStorage.setItem(`notes_${student.username}`, JSON.stringify(updatedNotes));
   };
 
