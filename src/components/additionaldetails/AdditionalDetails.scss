@@ -130,3 +130,8 @@ body.student-details-popup-open {
   color: #FFFFFF;
   cursor: pointer;
 }
+
+.scrollable-notes {
+  max-height: 100px; // Adjust as needed
+  overflow-y: auto;
+}

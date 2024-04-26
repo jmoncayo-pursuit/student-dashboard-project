@@ -23,7 +23,7 @@ const AdditionalDetails = ({ student }) => {
     return `${(value * 100).toFixed(2)}%`;
   };
 
-
+  // Function to render certification status emoji
   const renderCertificationStatus = (certification) => {
     return certification ? "✅" : "❌";
   };
@@ -77,11 +77,13 @@ const AdditionalDetails = ({ student }) => {
           <div className="detail">
             <div className="detail-data">
               <h3>Notes:</h3>
-              {notes.map((note, index) => (
-                <div key={index}>
-                  <p>{note.commenter}: {note.comment}</p>
-                </div>              
-              ))}
+              <div className={notes.length > 1 ? "scrollable-notes" : ""}>
+                {notes.map((note, index) => (
+                  <div key={index} className="note">
+                    <p>{note.commenter}: {note.comment}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>          
           <div className="detail">

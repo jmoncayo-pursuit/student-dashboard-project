@@ -26,7 +26,7 @@ const OneOnOneSection = ({ student, onCloseNotes }) => {
       <h3>1-on-1 Notes</h3>
       <button className="close-notes-btn notes-btn" onClick={onCloseNotes}>Close Notes</button>
       <NoteForm onAddNote={handleAddNote} />
-      <div className="notes-list">
+      <div className={`notes-list ${notes.length > 1 ? "scrollable-notes" : ""}`}>
         {notes.map((note, index) => (
           <div key={index} className="note">
             <p><strong>Commenter:</strong> {note.commenter}</p>
