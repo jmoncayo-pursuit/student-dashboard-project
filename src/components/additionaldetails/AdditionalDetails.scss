@@ -53,6 +53,8 @@ body.student-details-popup-open {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: row; 
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .student-details-popup .student-info {
@@ -76,4 +78,33 @@ body.student-details-popup-open {
 .student-details-popup .detail {
   flex: 1;
   padding: 10px;
+}
+
+.detail h3 {
+  background-color: #21D19F;
+  padding: 15px;
+  border-radius: 10px 10px 0% 0% / 10px 10px 0% 0% ;
+  color: #FFFFFF;
+}
+.detail-data {
+  background-color: #FFFFFF;
+  border-radius: 0% 0% 10px 10px / 0% 0% 10px 10px ;
+  box-shadow: 0px 8px 12px 0px rgba(0,0,0,0.1);
+}
+
+.detail-data p {
+  font-size: .8em;
+  text-align: left;
+  margin-left: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;  
+}
+.addtional-details-header {
+  text-align: left;
+  margin-left: 10px;
+}
+
+.student-details p {
+  color: #A4A4A4;
+  font-size: 20px;
 }

@@ -35,40 +35,56 @@ const AdditionalDetails = ({ student }) => {
       </div>
 
       <div className="additional-details">
-        <h2>Additional Details:</h2>
+        <h3 className="addtional-details-header">Additional Details:</h3>
         <div className="details-container">
           <div className="detail">
-            <h3>Codewars</h3>
-            <p>Total: {codewars.current.total}</p>
-            <p>Last Week: {codewars.current.lastWeek}</p>
-            <p>Goal Total: {codewars.goal.total}</p>
-            <p>Last Week Goal: {codewars.goal.lastWeek}</p>
+            
+            <div className="detail-data">
+            <h3 >Codewars:</h3>
+              <p>Total: {codewars.current.total}</p>
+              <p>Last Week: {codewars.current.lastWeek}</p>
+              <p>Goal Total: {codewars.goal.total}</p>
+              <p>Last Week Goal: {codewars.goal.lastWeek}</p>
+            </div>
           </div>
           <div className="detail">
-            <h3>Certifications</h3>
+          <div className="detail-data">
+            <h3>Certifications:</h3>
             <p>Resume: {certifications.resume.toString()}</p>
             <p>LinkedIn: {certifications.linkedin.toString()}</p>
             <p>GitHub: {certifications.github.toString()}</p>
             <p>Mock Interview: {certifications.mockInterview.toString()}</p>
+            </div>
           </div>
           <div className="detail">
-            <h3>Cohort</h3>
+          <div className="detail-data">
+            <h3>Cohort:</h3>
             <p>Cohort Code: {cohort.cohortCode}</p>
             <p>Start Date: {cohort.cohortStartDate}</p>
             <p>Assignments Score: {cohort.scores.assignments}</p>
             <p>Projects Score: {cohort.scores.projects}</p>
             <p>Assessments Score: {cohort.scores.assessments}</p>
+            </div>
           </div>
           <div className="detail">
-            <h3>Notes</h3>
+          <div className="detail-data">
+            <h3>Notes:</h3>
             {notes.map((note, index) => (
               <div key={index}>
                 <p>{note.commenter}: {note.comment}</p>
-              </div>
-            ))}
+              </div>              
+            ))}</div>
+          </div>          
+          <div className="detail">
+          <div className="detail-data">
+            <h3>On-track Status:</h3> 
+            <p>
+              {isOnTrack ? 'On Track' : 'Off Track'}
+            </p> 
+          </div>
           </div>
         </div>
-        <h3>On-track Status:</h3> <br /> {isOnTrack ? 'On Track' : 'Off Track'} 
+        
       </div>
     </div>
   );
