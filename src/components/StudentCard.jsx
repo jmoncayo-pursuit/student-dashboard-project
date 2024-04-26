@@ -22,6 +22,10 @@ const StudentCard = ({ student }) => {
     setShowNotes(!showNotes);
   };
 
+  const handleCloseNotes = () => {
+    setShowNotes(false);
+  };
+
   return (
     <div className="student-card">
       <div className="student-info">
@@ -34,17 +38,14 @@ const StudentCard = ({ student }) => {
       {showDetails && (
         <div className="student-details-popup">
           <button className="close-btn" onClick={handleShowDetails}>X</button>
-          <div className="student-info-popup">
-            {/* Student info goes here */}
-          </div>
           <div className="additional-details">
             <AdditionalDetails student={student} />
           </div>
           <div className="notes-section">
             {!showNotes ? (
-              <button className="notes-btn" onClick={handleShowNotes}>Add Notes</button>
+              <button className="notes-btn" onClick={handleShowNotes}>1-on-1 Notes</button>
             ) : (
-              <OneOnOneSection student={student} />
+              <OneOnOneSection student={student} onCloseNotes={handleCloseNotes} />
             )}
           </div>
         </div>

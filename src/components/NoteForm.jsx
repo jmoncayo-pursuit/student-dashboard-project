@@ -25,7 +25,7 @@ const NoteForm = ({ onAddNote }) => {
         Comment:
         <textarea value={comment} onChange={(e) => setComment(e.target.value)} />
       </label>
-      <button type="submit">Add Note</button>
+      <button type="submit" className="notes-btn">Add Note</button>
     </form>
   );
 };
