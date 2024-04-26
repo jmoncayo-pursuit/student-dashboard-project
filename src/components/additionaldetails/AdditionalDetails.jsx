@@ -1,10 +1,12 @@
+// AdditionalDetails.jsx
+
 import React from "react";
 import './AdditionalDetails.scss';
 
 const AdditionalDetails = ({ student }) => {
   if (!student) return null;
   
-  const { names, username, dob, profilePhoto, certifications, codewars } = student;
+  const { names, username, dob, profilePhoto, certifications, codewars, notes, cohort } = student;
 
   const isOnTrack = (
     certifications &&
@@ -21,7 +23,9 @@ const AdditionalDetails = ({ student }) => {
     <div className='pop-out-window'>
       <div className="student-box">
         <div className="student-info">
+          <div className="profile-photo-container">
           <img src={profilePhoto} alt={names.preferredName} className="profile-photo" />
+          </div>
           <div className="student-details">
             <h2>{names.preferredName} {names.middleName} {names.surname}</h2>
             <p>{username}</p>
@@ -29,10 +33,42 @@ const AdditionalDetails = ({ student }) => {
           </div>
         </div>
       </div>
+
       <div className="additional-details">
-        <h2>Additional Details</h2>
-        <p>Codewars Score: {codewars.current.total}</p>
-        <p>On-track Status: {isOnTrack ? 'On Track' : 'Off Track'}</p>
+        <h2>Additional Details:</h2>
+        <div className="details-container">
+          <div className="detail">
+            <h3>Codewars</h3>
+            <p>Total: {codewars.current.total}</p>
+            <p>Last Week: {codewars.current.lastWeek}</p>
+            <p>Goal Total: {codewars.goal.total}</p>
+            <p>Last Week Goal: {codewars.goal.lastWeek}</p>
+          </div>
+          <div className="detail">
+            <h3>Certifications</h3>
+            <p>Resume: {certifications.resume.toString()}</p>
+            <p>LinkedIn: {certifications.linkedin.toString()}</p>
+            <p>GitHub: {certifications.github.toString()}</p>
+            <p>Mock Interview: {certifications.mockInterview.toString()}</p>
+          </div>
+          <div className="detail">
+            <h3>Cohort</h3>
+            <p>Cohort Code: {cohort.cohortCode}</p>
+            <p>Start Date: {cohort.cohortStartDate}</p>
+            <p>Assignments Score: {cohort.scores.assignments}</p>
+            <p>Projects Score: {cohort.scores.projects}</p>
+            <p>Assessments Score: {cohort.scores.assessments}</p>
+          </div>
+          <div className="detail">
+            <h3>Notes</h3>
+            {notes.map((note, index) => (
+              <div key={index}>
+                <p>{note.commenter}: {note.comment}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <h3>On-track Status:</h3> <br /> {isOnTrack ? 'On Track' : 'Off Track'} 
       </div>
     </div>
   );

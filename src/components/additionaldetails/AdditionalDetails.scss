@@ -1,10 +1,12 @@
+// AdditionalDetails.scss
+
 .student-details-popup {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;
-  max-width: 600px;
+  width: 90%; /* Adjust width as needed */
+  max-width: 800px; /* Adjust max-width as needed */
   background-color: white;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
@@ -38,7 +40,6 @@ body.student-details-popup-open {
 }
 
 .student-details-popup .student-box {
-  width: 25%;
   padding: 20px;
   background-color: #f2f2f2;
   border-radius: 10px;
@@ -47,25 +48,32 @@ body.student-details-popup-open {
 }
 
 .student-details-popup .additional-details {
-  flex: 1;
-  padding: 20px;
   background-color: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row; 
 }
 
 .student-details-popup .student-info {
   display: flex;
-  flex-direction: row;
-  align-items: center;
 }
 
-.student-details-popup .profile-photo {
-  width: 100px;
-  height: auto;
-  margin-right: 20px;
+.student-details-popup .profile-photo-container {
+  position: relative;
+  margin-bottom: 10px;  
 }
 
 .student-details-popup .student-details {
+  text-align: left;
+  margin-left: 20px; /* Adjust margin as needed */
+}
+
+.student-details-popup .details-container {
+  display: flex;
+}
+
+.student-details-popup .detail {
   flex: 1;
+  padding: 10px;
 }
