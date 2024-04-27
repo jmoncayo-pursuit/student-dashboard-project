@@ -41,7 +41,7 @@ const App = () => {
         />
       </aside>
       <div className="top-right-panel">
-        filter-users-dropdown search-users welcome-back-text login-profile-80px
+        {/* filter-users-dropdown search-users welcome-back-text login-profile-80px */}
       </div>
       <main className="main-content">
         <div className="upper-main">
