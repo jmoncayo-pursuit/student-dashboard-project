@@ -7,10 +7,12 @@ import SortByDateDropdown from "./components/sortbydatedropdown/SortByDateDropdo
 import data from "./data/data.json";
 import "./app.scss";
 import TopRightPanel from "./components/toprightpanel/TopRightPanel";
+import SearchUsers from "./components//toprightpanel/SearchUsers";
 
 const App = () => {
   const [selectedCohort, setSelectedCohort] = useState("");
   const [students, setStudents] = useState(data);
+  const [searchTerm, setSearchTerm] = useState(""); 
 
   const getCohorts = () => {
     const uniqueCohorts = [];
@@ -35,16 +37,21 @@ const App = () => {
     }
   };
 
-  // Extract email addresses for filter options
   const filterOptions = data.map((student) => ({
     value: student.username,
     label: student.username,
   }));
 
-  // Handle filter change function
   const handleFilterChange = (event) => {
-    // Implement logic to handle filter change
     console.log("Selected option:", event.target.value);
+  };
+
+  const handleSearchInputChange = (event) => {
+    setSearchTerm(event.target.value);
+    const filteredStudents = data.filter((student) =>
+      student.username.toLowerCase().includes(event.target.value.toLowerCase())
+    );
+    setStudents(filteredStudents);
   };
 
   return (
@@ -59,12 +66,11 @@ const App = () => {
           selectedCohort={selectedCohort}
         />
       </aside>
-      {/* Pass filter options and handler function to TopRightPanel */}
+      {/* Pass filter options and handler functions to TopRightPanel */}
       <TopRightPanel
         filterOptions={filterOptions}
         handleFilterChange={handleFilterChange}
-        handleSearchInputChange={() => {}}
-        username="Jean"
+        handleSearchInputChange={handleSearchInputChange} 
         profileImageUrl="profile.jpg"
         data={students}
       />
@@ -85,6 +91,8 @@ const App = () => {
           </div>
         </div>
         <div className="lower-main">
+          {/* Pass the searchTerm and handleSearchInputChange function to the SearchUsers component */}
+          <SearchUsers handleSearchInputChange={handleSearchInputChange} />
           <StudentList students={students} />
         </div>
       </main>

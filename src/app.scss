@@ -50,7 +50,6 @@ ul {
   
 .upper-main { 
   grid-area: 1 / 1 / 2 / 3;
-  // width: 1030px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -145,7 +144,7 @@ ul {
     height: 30px;
     width: 200px;
   } 
-        /* top|right|bottom|left */
+
   margin: 0px 20px 20px 20px;
   height: 30px;
   text-align: left;
@@ -176,4 +175,3 @@ ul {
     width: 200px;
   } 
 } 
-

@@ -23,7 +23,6 @@ const AdditionalDetails = ({ student }) => {
     return `${(value * 100).toFixed(2)}%`;
   };
 
-  // Function to render certification status emoji
   const renderCertificationStatus = (certification) => {
     return certification ? "✅" : "❌";
   };

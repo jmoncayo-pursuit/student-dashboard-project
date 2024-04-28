@@ -1,29 +1,27 @@
 // SortByDateDropdown.scss
 
 .sort-by-date-dropdown {
-    box-sizing: border-box;
-    padding: 10px 20px;
-    gap: 10px;
-    border-radius: 30px; 
-    margin-right: 250px;
-  }
-  
-  .sort-by-date-dropdown select {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: fit-content;
-    height: 40px;
-    border: 1px solid #D9D9D9;
-    border-radius: 30px;
-    cursor: pointer;  
-    font-family: inherit;
-    background-color: transparent;
-    color: #333;
-  }
-  
-  .sort-by-date-dropdown option {   
-    font-size: 14px;
-    color: #333;   
-  }
-  
+  box-sizing: border-box;
+  padding: 10px 20px;
+  gap: 10px;
+  border-radius: 30px;
+  margin-right: 50px; 
+  display: flex;
+  justify-content: center; 
+}
+
+.sort-by-date-dropdown select {
+  width: 180px;
+  height: 40px;
+  border: 1px solid #D9D9D9;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: inherit;
+  background-color: transparent;
+  color: #333;
+}
+
+.sort-by-date-dropdown option {
+  font-size: 14px;
+  color: #333;
+}

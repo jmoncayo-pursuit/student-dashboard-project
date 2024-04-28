@@ -17,8 +17,8 @@
     border: 1px solid #ced4da;
     border-radius: 5px;
     padding: 5px;
-    overflow-y: auto; /* Enable vertical scrolling */
-    max-height: 200px; /* Limit height to 200px */
+    overflow-y: auto; 
+    max-height: 200px;
   }
 
   .search-users {
@@ -40,6 +40,13 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #f0f0f0; /* Light grey color */
+    background-color: #f0f0f0; 
   }
+}
+
+.circle {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: #D9D9D9;
 }
