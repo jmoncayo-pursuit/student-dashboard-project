@@ -2,7 +2,7 @@
 // Component to display 1-on-1 notes for a student, including a form for adding new notes and a list of previous notes.
 
 import React, { useState, useEffect } from "react";
-import NoteForm from "./NoteForm";
+import NoteForm from "./noteform/NoteForm";
 
 const OneOnOneSection = ({ student, onCloseNotes }) => {
   const [notes, setNotes] = useState([]);
