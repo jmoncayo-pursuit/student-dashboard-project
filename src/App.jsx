@@ -66,7 +66,6 @@ const App = () => {
           selectedCohort={selectedCohort}
         />
       </aside>
-      {/* Pass filter options and handler functions to TopRightPanel */}
       <TopRightPanel
         filterOptions={filterOptions}
         handleFilterChange={handleFilterChange}
@@ -91,8 +90,6 @@ const App = () => {
           </div>
         </div>
         <div className="lower-main">
-          {/* Pass the searchTerm and handleSearchInputChange function to the SearchUsers component */}
-          <SearchUsers handleSearchInputChange={handleSearchInputChange} />
           <StudentList students={students} />
         </div>
       </main>
