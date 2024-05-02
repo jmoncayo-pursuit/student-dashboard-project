@@ -5,9 +5,9 @@
   padding: 10px 20px;
   gap: 10px;
   border-radius: 30px;
-  margin-right: 50px; 
   display: flex;
-  justify-content: center; 
+  justify-content: end; 
+  cursor: pointer;
 }
 
 .sort-by-date-dropdown select {
